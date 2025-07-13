@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>students-form</title>
+    <style>
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f2f4f7;
+    margin: 0;
+    padding: 20px;
+}
+
+
+.container1 {
+    max-width: 500px;
+    margin: auto;
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.container1 h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.container1 table {
+    width: 100%;
+}
+
+.container1 td {
+    padding: 10px 5px;
+}
+
+.container1 input[type="text"],
+.container1 input[type="number"],
+.container1 input[type="email"],
+.container1 select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.container1 input[type="radio"] {
+    margin-right: 5px;
+}
+
+#btn1 {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#btn1:hover {
+    background: #0056b3;
+}
+
+.container2 {
+    max-width: 800px;
+    margin: 30px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    overflow-x: auto;
+}
+
+.container2 table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 2px solid #444;
+}
+
+.container2 td {
+    padding: 10px;
+    text-align: center;
+    color: #333;
+    border: 1px solid #555;
+    font-weight: 500;
+   
+}
+
+.container2 tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.container2 tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.container2 td button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.container2 td button:hover {
+    background: #b02a37;
+}
+
+
+@media (max-width: 600px) {
+    .container1, .container2 {
+        padding: 15px;
+    }
+}
+</style>
+
+</head>
+<body>
+    <div class="container1">
+    <h2>STUDENT FORM</h2>
+    <form action="">
+        <table>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>
+                        <input type="text" id="sname" name="name" placeholder="Enter your name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Age</td>
+                    <td>
+                        <input type="number" id="sage" placeholder="Enter your age">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Gender</td>
+                    <td>
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">FeMale</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Course</td>
+                    <td>
+                        <select id="scourse">
+                            <option  id="java">Java</option>
+                            <option  id="aws">AWS</option>
+                            <option  id="python">Python</option>
+                            <option  id="ai">AI</option>
+                            <option  id="devops">Devops</option>
+                            <option  id="js">Javascript</option>
+                        </select>
+                    </td>
+                </tr>
+               <tr>
+                <td>E-mail</td>
+                <td>
+                    <input type="email" id="smail" placeholder="Enter your mail">
+                </td>
+               </tr>
+            </tbody>
+        </table>
+         <button id="btn1">Save</button>
+    </form>
+    </div>
+    <div class="container2">    
+        <table border="1" id="list">
+            <tbody>
+                <tr>
+                    <td>NAME</td>
+                     <td>AGE</td>
+                      <td>COURSE</td>
+                       <td>GENDER</td>
+                        <td>EMAIL</td>
+                         <td>ACTION</td>
+                 </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
